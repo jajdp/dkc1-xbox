@@ -80,9 +80,9 @@ target_compile_options(dkc1_uwp PRIVATE
     $<$<COMPILE_LANGUAGE:CXX>:/EHsc>
     $<$<COMPILE_LANGUAGE:CXX>:/bigobj>)
 
-# Enlace estilo receta probada de Mario Kart Wii (prueba-uwp): CRT «store» (lo trae el
-# entorno vcvarsall x64 store + /MD) + OneCore, sin user32 (MessageBoxA se quitó de
-# rom_image_verify.c). d3d11/dxgi/xaudio2 son válidos en AppContainer.
+# Enlace: el CRT «store» (lo trae el entorno vcvarsall x64 store + /MD) + OneCore, sin
+# user32 (MessageBoxA se quitó de rom_image_verify.c). d3d11/dxgi/xaudio2 son válidos en
+# AppContainer.
 target_link_libraries(dkc1_uwp PRIVATE
     ${SNESRECOMP_RUNNER_LIBRARIES}
     d3d11 dxgi xaudio2 WindowsApp OneCore)

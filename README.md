@@ -116,7 +116,7 @@ Not by reading it: by rebuilding it. On 2026-10-14, from this repository's own `
 | Does it build? | **2,238 objects, 0 errors**, linking `DKC1Recomp.exe` (8,130,048 bytes) |
 | Package and signature | `makepri` → `makeappx` → `signtool`, a signed `.msix` of 8,298,236 bytes |
 | Against the `.msix` that runs on the consoles (0.0.6.0) | 24,064 bytes more, 16,384 of them in `.text`. The difference is not noise: the strings `%s/save.srm`, `Failed fopen for save` and the whole `Suspending` handler are **in the executable this recipe builds and absent from the installed one**. That package was built before the save code existed |
-| Determinism of the toolchain | Measured once for this family rather than three times: the same tree compiled from two different paths gives **93 of 93 objects with an identical `.text`** (see the `supermetroid-recomp-xbox` repository, same engine, same compiler, same flags) |
+| Determinism of the toolchain | Measured once for this family rather than three times: the same tree compiled from two different paths gives **93 of 93 objects with an identical `.text`** (measured once on another game of this same family: same engine, same compiler, same flags) |
 
 ## Credits and license
 

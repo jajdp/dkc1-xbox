@@ -115,7 +115,7 @@ repositorio, contra una copia con la recompilación ya generada:
 | ¿Compila? | **2,238 objetos, 0 errores**, y enlaza `DKC1Recomp.exe` (8,130,048 bytes) |
 | Paquete y firma | `makepri` → `makeappx` → `signtool`, un `.msix` firmado de 8,298,236 bytes |
 | Contra el `.msix` que corre en las consolas (0.0.6.0) | 24 064 bytes mas, 16 384 de ellos en `.text`. La diferencia no es ruido: las cadenas `%s/save.srm`, `Failed fopen for save` y todo el manejador de `Suspending` **estan en el ejecutable que construye esta receta y no en el instalado**. Ese paquete se armo antes de que existiera el guardado |
-| Determinismo de la cadena de compilación | Medido una vez para esta familia en vez de tres: el mismo árbol compilado desde dos rutas distintas da **93 de 93 objetos con `.text` idéntico** (ver el repositorio `supermetroid-recomp-xbox`, mismo motor, mismo compilador, mismas opciones) |
+| Determinismo de la cadena de compilación | Medido una vez para esta familia en vez de tres: el mismo árbol compilado desde dos rutas distintas da **93 de 93 objetos con `.text` idéntico** (medido una vez en otro juego de esta misma familia: mismo motor, mismo compilador, mismas opciones) |
 
 ## Créditos y licencia
 
